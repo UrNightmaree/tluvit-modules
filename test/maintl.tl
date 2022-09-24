@@ -1,3 +1,4 @@
+require 'tluvit-pretty-print'
 local Object = require 'tluvit-core'.Object
 
 local Test = Object:extend()
@@ -16,7 +17,7 @@ end
 
 function Test:printStorageContents()
   for _,content in pairs(self.storage) do
-    print(tostring(content))
+    p(tostring(content))
   end
 end
 
